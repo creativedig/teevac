@@ -71,7 +71,7 @@ main{
 
 .main-free-course{
     width:100%;
-    background:linear-gradient(120deg, white, rgb(244, 244, 244));
+    background:linear-gradient(120deg, white, rgb(234, 234, 234));
     display:flex;
     flex-direction:column;
     text-align: center;
@@ -115,7 +115,7 @@ main{
 }
 
 .about-program-here{
-  padding:100px 30px;
+  padding:80px 30px;
 }
 
 .about-program-here h3{
