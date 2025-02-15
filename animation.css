@@ -1,0 +1,24 @@
+/*ANIMATION FOR IMAGE AT THE TOP*/
+
+.main-hero-banner {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDown 1.5s ease-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) translateY(-100%);
+    }
+
+    50% {
+        opacity: .3;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
