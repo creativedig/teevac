@@ -19,7 +19,7 @@ font-family: "Raleway", serif;
     --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
     --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
     --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
-
+  --gray-color:rgb(130, 128, 128);
 
   }
 
@@ -82,9 +82,13 @@ main{
 }
 
 .main-free-course h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    /*for gradient text colour*/
+    background:var(--dark-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        /*for gradient text colour*/
     margin: 0px 30px;
-    color:var(--dark-blue);
     font-family: "Hanalei Fill", cursive;
     font-weight: 400;
     font-style: normal;
@@ -99,11 +103,52 @@ main{
 }
 
 .main-free-course h4{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0px 30px;
-    color:var(--dark-blue);
+    color:var(--orange-color);
     font-optical-sizing: auto;
-  font-family: "Libre Franklin", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+    font-family: "Libre Franklin", serif;
+    font-optical-sizing: auto;
+   font-weight: 900;
+}
+
+.about-program-here{
+  padding:100px 30px;
+}
+
+.about-program-here h3{
+      /*for gradient text colour*/
+      background:var(--dark-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
+          font-size:1.5rem;
+}
+
+.divider{
+  width:30%;
+  height:1%;
+  padding:1px;
+  background:var(--orange-gradient);
+  margin-top:-20px;
+}
+
+.about-p-body{
+  color: var(--gray-color);
+  text-align:left;
+  font-size:1.2rem;
+  font-weight:400;
+  line-height:30px;
+}
+
+.about-p-heading{
+        /*for gradient text colour*/
+        background:var(--orange-gradient);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
+          font-size:1.5rem;
+          font-family: "Libre Franklin", serif;
+          font-optical-sizing: auto;
+          font-weight: 900;
 }
