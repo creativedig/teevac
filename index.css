@@ -47,11 +47,12 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow-x:hidden;
 }
 
 .main-hero-banner{
     position:relative;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 .main-hero-banner img{
