@@ -1,0 +1,126 @@
+/* fonts
+
+Libre Franklin: CSS class for a variable style
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.libre-franklin-<uniquifier> {
+  font-family: "Libre Franklin", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+Raleway: CSS class for a variable style
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.raleway-<uniquifier> {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+Hanalei Fill: CSS class
+
+.hanalei-fill-regular {
+  font-family: "Hanalei Fill", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.black-han-sans-regular {
+  font-family: "Black Han Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+*/
+
+body{
+font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding:0;
+  margin:0;
+}
+
+/*Root design*/
+:root{
+    --blue-color:rgb(0, 170, 255);
+    --light-blue-color:rgb(84, 182, 247);
+    --dark-blue:rgb(5, 5, 90);
+    --blue2-color:rgb(0, 0, 255);
+    --yellow:rgb(255, 255, 0);
+    --orange-color:rgb(231, 48, 6);
+    --light-orange-color:rgb(248, 153, 0);
+    --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
+    --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
+    --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
+
+
+  }
+
+/*Logo Section design*/
+
+header{
+    background:var(--gradient-1);
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    cursor:pointer;
+    position:relative;
+    z-index:100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main section style*/
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -45px;
+}
+
+.main-hero-banner{
+    position:relative;
+    overflow:hidden;
+}
+
+.main-hero-banner img{
+  margin-top:0;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+}
+
+
+.main-hero-section{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.main-free-course{
+    width:100%;
+    background:rgb(255, 254, 254);
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    padding: 10px 50px;
+    margin-top: -5px;
+    position:relative;
+    z-index:100;
+}
+
+.main-free-course h1{
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color:var(--dark-blue);
+}
