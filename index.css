@@ -31,12 +31,18 @@ header{
     color:var(--blue2-color);
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align:center;
     padding: 5px 30px;
     cursor:pointer;
     position:relative;
     z-index:200;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    font-size: .7rem;
+    line-height: 30px;
 }
 
 
@@ -139,7 +145,7 @@ main{
 .about-p-body{
   color: var(--gray-color);
   text-align:left;
-  font-size:1.2rem;
+  font-size:1rem;
   font-weight:400;
   line-height:30px;
 }
@@ -150,7 +156,7 @@ main{
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
           /*for gradient text colour*/
-          font-size:1.5rem;
+          font-size:.8rem;
           font-family: "Libre Franklin", serif;
           font-optical-sizing: auto;
           font-weight: 900;
