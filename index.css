@@ -41,7 +41,7 @@ header{
 }
 
 .logo{
-    font-size: .7rem;
+    font-size: .5rem;
     line-height: 30px;
 }
 
@@ -163,48 +163,11 @@ main{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------join-program-------------------*/
 
 .join-program{
   background:var(--dark-gradient);
-  padding:20px 30px 40px;
+  padding:20px 30px 60px;
   text-align:center;
   color:white;
 }
@@ -243,4 +206,13 @@ main{
   background:white;
   color:var(--orange-color);
   
+}
+
+
+/*-------------------footer-------------------*/
+footer{
+  background:var(--orange-gradient);
+  padding:10px;
+  text-align:center;
+  color:white;
 }
