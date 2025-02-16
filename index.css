@@ -235,6 +235,10 @@ footer{
           text-align:center;
 }
 
+
+.form-main{
+  margin-bottom: 100px;
+}
 .form h6{
   font-size:.8rem;
   font-weight:400;
@@ -247,7 +251,7 @@ footer{
 
 .form{
   background:rgb(255, 255, 255);
-  padding:100px 70px;
+  padding:100px 70px 50px;
   color:rgb(0, 0, 0);
 }
 .form label{
@@ -329,4 +333,13 @@ footer{
   text-align:center;
   color:var(--orange-color);
   display:none;
+}
+
+.back-home a{
+  color:var(--orange-color);
+  text-decoration:none;
+  font-size:.8rem;
+  font-weight:500;
+  background:white;
+  transition: all 0.7s ease;
 }
