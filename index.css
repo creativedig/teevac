@@ -216,3 +216,91 @@ footer{
   text-align:center;
   color:white;
 }
+
+
+/*-------------------Form Design-------------------*/
+.form{
+  background:rgb(255, 255, 255);
+  padding:20px 70px;
+  color:rgb(0, 0, 0);
+}
+.form label{
+  font-size:.9rem;
+  font-family: "Raleway", serif;
+  font-weight:500;
+  line-height:30px;
+  color:rgb(106, 105, 105);
+  margin:20px 0;
+}
+
+.form input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border-bottom: 1.5px solid var(--orange-color);
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  background:rgba(255, 255, 255, 0.053);
+  color:rgb(0, 0, 0);
+}
+
+.form select{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border-bottom: 1.5px solid var(--orange-color);
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  background:rgba(255, 255, 255, 0.053);
+  color:rgb(0, 0, 0);
+  appearance: none; /* Hides default arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background: url('custom-arrow.png') no-repeat right center; /* Optional: Add a custom arrow */
+}
+
+.form textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border-bottom: 1.5px solid var(--orange-color);
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  background:rgba(255, 255, 255, 0.053);
+  color:rgb(0, 0, 0);
+  resize: none;
+}
+
+.form button{
+  background:var(--orange-gradient);
+  color:white;
+  padding:10px 20px;
+  border-radius:5px;
+  border:none;
+  font-size:1rem;
+  font-family: "Raleway", serif;
+  font-weight:600;
+  transition: all 0.7s ease-in-out;
+  margin-top: 30px;
+  display: none;
+}
+
+.form button:hover{
+  background:white;
+  color:var(--orange-color);
+  border:1px solid var(--orange-color);
+  padding: 10px 40%;
+}
+
+#notice{
+  font-size:.7rem;
+  text-align:center;
+  color:var(--orange-color);
+  display:none;
+}
