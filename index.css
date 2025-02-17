@@ -431,7 +431,7 @@ footer{
   font-weight:700;
 }
 
-label::before{
+.accordion label::before{
   content: '+';
   color: rgb(139, 137, 137);
   font-size:1.5rem;
