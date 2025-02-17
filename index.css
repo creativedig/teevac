@@ -470,14 +470,8 @@ input[type="radio"]{
   padding:10px 20px;
 }
 
-
-
-.accordion li:hover .divider-2{
-  background:white;
-}
-
 .accordion input[type="radio"]:checked + label::before{
   content: '-';
-  color: rgb(139, 137, 137);
+  color: rgb(0, 0, 0);
   font-size:1.5rem;
 }
