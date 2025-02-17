@@ -402,9 +402,10 @@ footer{
   list-style:none;
   width:90%;
   margin:10px 20px;
-  padding:10px;
+  padding:0px 10px;
   border-radius:8px;
   box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.1);
+
 }
 
 .accordion li label{
@@ -451,7 +452,6 @@ input[type="radio"]{
 }
 
 .accordion .content{
-  padding:10px 20px;
   font-size:.9rem;
   font-weight:500;
   line-height:20px;
