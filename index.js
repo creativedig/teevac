@@ -122,3 +122,4 @@ function generateAllPDF() {
 
     doc.save("All_Registrations.pdf"); // Save as PDF
 }
+
