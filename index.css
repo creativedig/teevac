@@ -475,3 +475,33 @@ input[type="radio"]{
   color: rgb(0, 0, 0);
   font-size:1.5rem;
 }
+
+/* ---------------Carousel design here--------- */
+
+.carousel-sec{
+  padding:100px 20px;
+  text-align:center;
+
+}
+
+.carousel-sec h4{
+  font-size:1.2rem;
+  text-align:center;
+  background: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.carousel-sec p{
+  font-size:.9rem;
+  font-weight:500;
+  line-height:20px;
+  color:rgb(106, 105, 105);
+  text-align:center;
+  margin:-5px 40px 30px;
+}
+
+.carousel-item img{
+  width:100%;
+  height:auto;
+  aspect-ratio: 16/9;
+}
