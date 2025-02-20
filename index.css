@@ -60,6 +60,10 @@ main{
     overflow-x:hidden;
 }
 
+section{
+  padding:150px 10px;
+}
+/*
 .main-hero-banner{
     position:relative;
     overflow-x:hidden;
@@ -72,6 +76,52 @@ main{
   overflow:hidden;
   z-index:20;
 }
+
+*/
+
+/*
+Hero Section Design
+*/
+
+.hero{
+  background:rgb(225, 225, 225);
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow: hidden;
+}
+
+.hero-text{
+  text-align:center;
+}
+
+.hero-text h1{
+  font-family: "Black Han Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:4rem;
+  line-height:55px;
+}
+
+.hero-text h5{
+  font-size:1rem;
+  font-family: "Libre Franklin", serif;
+  font-weight: 500;
+  font-optical-sizing: auto; 
+}
+
+.hero-text p{
+  font-size:.8rem;
+  font-family: "Libre Franklin", serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  line-height:15px;
+}
+
+
 
 
 .main-hero-section{
@@ -404,7 +454,6 @@ footer{
   margin:10px 20px;
   padding:0px 10px;
   border-radius:8px;
-  box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -479,7 +528,7 @@ input[type="radio"]{
 /* ---------------Carousel design here--------- */
 
 .carousel-sec{
-  padding:100px 20px;
+  padding:150px 20px;
   text-align:center;
 
 }
@@ -536,6 +585,8 @@ input[type="radio"]{
 .carousel-item .img img{
   width:100%;
   height:auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel-text{
