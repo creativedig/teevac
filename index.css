@@ -508,22 +508,29 @@ input[type="radio"]{
   border-radius:10px;
   border:solid 2px rgb(220, 217, 217);
   transition: all 0.5s ease-in-out;
-  background:linear-gradient(To bottom right, rgb(255, 255, 255), rgb(243, 241, 241));
-  padding:50px 25px;
+  background:var(--dark-gradient);
+  padding:50px 20px;
 }
 
 
 .carousel-item .d-block:hover{
-  border:solid 2px var(--orange-color);
-  opacity:.8;
-  background:linear-gradient(To bottom right, rgb(252, 226, 226), rgb(243, 241, 241));
+  border:solid 2px var(--blue-color
+  );
+  opacity:.8;}
+
+.carousel-item .d-block img{
+  width:100%;
+  height:auto;
 }
+
 .carousel-item .img{
   width:100%;
   aspect-ratio: 16/9;
   overflow:hidden;
   border-radius:10px;
-  margin-bottom:20px;
+  position:relative;
+  transition: all 0.5s ease-in-out;
+  border:groove 5px var(--blue-color);
 }
 
 .carousel-item .img img{
@@ -531,24 +538,19 @@ input[type="radio"]{
   height:auto;
 }
 
-.carousel-text{
-  padding: 0px 10px;
-  border-radius:10px;
-}
-
 .carousel-text h4{
+  color:white;
   cursor:pointer;
-  font-size:1.5rem;
+  font-size:1.2rem;
   font-weight:600;
-  color:var(--orange-color);
-  margin:0px 0px 20px;
+  margin:20px 0px;
 }
 
 .carousel-text p{
-  font-size:.9rem;
-  font-weight:500;
+  font-size:.8rem;
+  font-weight:400;
   line-height:20px;
-  color:rgb(106, 105, 105);
+  color:white;
   text-align:center;
 }
 
@@ -565,6 +567,6 @@ input[type="radio"]{
 .carousel-text a:hover{
   letter-spacing: 2px;
   text-decoration:none;
-  background:white;
   color:var(--orange-color);
+
 }
