@@ -538,6 +538,11 @@ input[type="radio"]{
   height:auto;
 }
 
+.carousel-text{
+  width:100%;
+  padding:0px;
+}
+
 .carousel-text h4{
   color:white;
   cursor:pointer;
