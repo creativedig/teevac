@@ -113,8 +113,73 @@ The digital economy is growing, and web design skills are becoming more valuable
 
 
 
-        <h4>Our Partners</h4>
-        <p>Discover the organizations that support our mission <br> to empower individuals with digital skills.</p>
-        <div class="sponsor-slide">
-            
+
+
+.circle-div{
+  position:absolute;
+  top:0%;
+  left:20%;
+  width:100px;
+  height:100px;
+  overflow:hidden;
+  border-radius: 50%;  
+}
+
+.circle-div-relative{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.circle-div-absolute{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+
+.circle-div-absolute::after{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  background-image: conic-gradient( rgb(243, 197, 251), rgba(235, 252, 254, 0.144), rgb(201, 248, 253));
+  animation: circle 4s linear infinite;
+  animation-delay: -3s;
+}
+
+.circle-div-absolute::before{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  background-image: conic-gradient(var(--blue-color), rgba(128, 0, 128, 0.121));
+  border-radius: 50%;
+  animation: circle 4s linear infinite;
+}
+
+
+
+@keyframes circle{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+
+<div class="circle-div">
+    <div class="circle-div-relative">
+        <div class="circle-div-absolute">
+            <span> </span>
         </div>
+    </div>
+
+</div>
+          
