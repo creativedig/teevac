@@ -1,0 +1,22 @@
+@keyframes autoBlurAnimation {
+    0% {
+      filter: blur(40px);
+    }
+
+    10%, 90%{
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(40px);
+    }
+    
+  }
+
+  .autoBlurDesign, section{
+    animation:autoBlurAnimation both linear;
+    animation-timeline:view();
+  }
+  
+  

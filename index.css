@@ -63,11 +63,29 @@ main{
     align-items: center;
     overflow-x:hidden;
 }
-/*
-section{
-  padding:150px 10px;
+.autoShow{
+  animation:autoShowAnimation both 1s ease-in-out;
+  animation-timeline:view(70% 5%);
 }
 
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale (0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+}
+
+
+
+
+
+
+/*
 .main-hero-banner{
     position:relative;
     overflow-x:hidden;
