@@ -21,11 +21,11 @@ html{
     --blue2-color:rgb(147, 4, 147);
     --orange-color:rgb(44, 27, 23);
     --light-orange-color:rgb(98, 91, 80);
-    --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), white);
+    --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), rgb(235, 252, 254));
     --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
     --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
     --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
-    --gray-color:rgb(234, 234, 234);
+    --gray-color:rgb(239, 239, 239);
 
   }
 
@@ -123,7 +123,7 @@ Hero Section Design
 }
 
 .hero-text-2{
-  background:rgb(255, 255, 255);
+  background:var(--light-blue-gradient);
   padding:30px 20px;
   border-radius:10px 0px 0px 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -161,8 +161,8 @@ Hero Section Design
 
 /*-------------------Why our Virtual Class here-------------------*/
 .why-virtual{
-background:var( --gray-color);
-  padding:100px 30px;
+  background:var( --gray-color);
+  padding:150px 30px;
   text-align:center;
 }
 
@@ -171,10 +171,15 @@ background:var( --gray-color);
   font-family: "Raleway", serif;
   font-optical-sizing: auto; 
   font-weight: 700;
+      /*for gradient text colour*/
+      background:var(--dark-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
 }
 
 .why-virtual p{
-  font-size:.8rem;
+  font-size:.7rem;
   font-family: "Libre Franklin", serif;
   font-weight: 400;
   line-height:20px;
@@ -187,12 +192,53 @@ background:var( --gray-color);
   flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
-  gap:10px;
-  margin-top:30px;
-  background:white;
-  padding:20px 10px;
+  margin-top:0px 20px;
+  padding:0px 20px;
   border-radius:10px;
+}
+
+.inner-box-img{
+  width:50%;
+  height:auto;
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.why-virtual-box img{
+  width:100%;
+}
+
+.inner-virtual-box{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  padding:60px 35px;
+  align-items:center;
+  border:1px solid var(--blue-color);
+  border-radius:5px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background:white;
+  margin:10px 0px;
+}
+
+.inner-virtual-box h4{
+  font-size:1.2rem;
+  font-optical-sizing: auto;
+  font-weight: 600;
+    /*for gradient text colour*/
+    background:var(--dark-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        /*for gradient text colour*/
+   margin:10px 0px;
+   text-transform:uppercase;
+}
+
+.inner-virtual-box p{
+  font-size:.9rem;
+  font-weight: 400;
+  line-height:20px;
+  color:var(--light-orange-color);
 }
 
 
@@ -350,10 +396,10 @@ background:var( --gray-color);
 
 /*-------------------footer-------------------*/
 footer{
-  background:var(--orange-gradient);
+  background:var(--light-blue-gradient);
   padding:10px;
   text-align:center;
-  color:white;
+  color:black;
 }
 
 
