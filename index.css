@@ -23,14 +23,14 @@ html{
     --light-orange-color:rgb(98, 91, 80);
     --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), rgb(235, 252, 254));
     --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
+   --linear-background-gradient: linear-gradient(120deg, rgb(243, 197, 251), rgba(235, 252, 254, 0.144), rgb(201, 248, 253));
     --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
     --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
     --gray-color:rgb(239, 239, 239);
 
   }
 
-/*Logo Section design*/
-
+/*Logo Section design
 header{
     background:var(--white-color);
     color:var(--blue2-color);
@@ -44,6 +44,9 @@ header{
     z-index:200;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+*/
+
 
 .logo{
     font-size: .5rem;
@@ -85,7 +88,11 @@ Hero Section Design
 */
 
 .hero{
-  background:var(--light-blue-gradient);
+  background-image: var(--linear-background-gradient),
+  url(/image/hero_background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width:100%;
   display:flex;
   flex-direction:column;
