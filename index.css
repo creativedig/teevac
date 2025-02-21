@@ -367,6 +367,299 @@ Hero Section Design
 }
 
 
+
+/* ---------------Accordance Design start here--------- */
+.accord-box{
+  display: flex;
+  flex-direction: column;
+  margin:0px;
+  padding: 150px 10px;
+  width:100%;
+  box-shadow:#93929137 7px 7px 30px;
+}
+
+.accord-box h2{
+  font-size:1.4rem;
+  margin-bottom:30px;
+  text-align: center;
+  background: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accord-box h2 span{
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.accordion{
+  cursor:pointer;
+  padding:0px 20px;
+}
+
+.accordion li{
+  list-style:none;
+  width:90%;
+  margin:10px 20px;
+  padding:0px 10px;
+  border-radius:8px;
+
+}
+
+.accordion li label{
+  display:flex;
+  align-items:center;
+  color: rgb(139, 137, 137);
+  cursor: pointer;
+  padding: 10px 0px;
+  width: 100%;
+  text-align: left;
+  font-size: .9rem;
+  font-weight:500;
+  transition: all 0.5s ease, padding 0.3s ease;
+  border-radius: 5px;
+  box-shadow:6px 6px 10px -1px rgba(3, 2, 2, 0.089),
+              -6px -6px 10px -1px rgba(232, 229, 229, 0.514);
+  
+}
+
+.accordion li label:hover{
+  background:var(--dark-gradient);
+  color:white;
+  font-weight:700;
+}
+
+.accordion label::before{
+  content: '+';
+  color: rgb(139, 137, 137);
+  font-size:1.5rem;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  padding-left:20px;
+}
+
+label:hover::before{
+  color:white;
+  font-size:1.2rem;
+}
+
+
+
+input[type="radio"]{
+  display:none;
+}
+
+.accordion .content{
+  font-size:.9rem;
+  font-weight:500;
+  line-height:20px;
+      /*for gradient text colour*/
+      background:var(--orange-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+         /*for gradient text colour*/
+         max-height:0;
+         overflow:hidden;
+         transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+  max-height:400px;
+  padding:10px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::before{
+  content: '-';
+  color: rgb(0, 0, 0);
+  font-size:1.5rem;
+}
+
+
+/*-------------------Sponsor Details-------------------*/
+
+.sponsor-container{
+  padding:80px 0;
+  text-align:center;
+}
+
+.sponsor-text{
+  text-align:center;
+}
+
+.sponsor-text h4{
+  font-size:1.5rem;
+  font-weight:600;
+  text-align:center;
+      /*for gradient text colour*/
+      background:var(--dark-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+         /*for gradient text colour*/
+}
+
+.sponsor-text p{
+  font-size:.9rem;
+  font-weight:400;
+  line-height:20px;
+  color:rgb(106, 105, 105);
+  margin-bottom:30px;
+}
+
+.sponsor{
+  padding:30px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.sponsor::before, .sponsor::after{
+  position:absolute;
+  top:0;
+  width:150px;
+  height: 100%;
+  content:"";
+}
+
+.sponsor::before{
+  left:0;
+  background:linear-gradient(to left, transparent, rgb(255, 255, 255));
+}
+
+.sponsor::after{
+  right:0;
+  background:linear-gradient(to right, transparent, rgb(255, 255, 255));
+}
+
+.sponsor:hover .sponsor-slide{
+  animation-play-state: paused;
+}
+
+.sponsor-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: max-content;
+  animation: scrolling 10s linear infinite;
+}
+
+
+/**KeyFrame design*/
+@keyframes scrolling {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.sponsor-slide img{
+  max-height: 50px; 
+  width: auto;
+  margin:0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------join-program-------------------*/
+
+.join-program{
+  background:var(--dark-gradient);
+  padding:50px 30px;
+  text-align:center;
+}
+
+.join-program h3{
+  font-size:1.4rem;
+  font-optical-sizing: auto;
+  font-weight:600;
+  margin-bottom:30px;
+       /*for gradient text colour*/
+       background:var(--light-blue-gradient);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
+}
+
+.join-program p{
+  font-size:.9rem;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  line-height:22px;
+  margin-bottom:30px;
+  color:white;
+}
+
+.join-program a{
+  color:var(--blue-color);
+  text-decoration:none;
+  font-size:1rem;
+  font-optical-sizing: auto;
+  font-weight:600;
+  background:var(--light-blue-gradient);
+  padding:10px 20px;
+  border-radius:5px;
+  transition: all 0.7s ease;
+}
+
+.join-program a:hover{
+  text-decoration:none;
+  background:var(--gradient-1);
+  color:var(--light-blue-color);
+}
+
+
+
+
+/*-------------------footer-------------------*/
+footer{
+  background:var(--light-blue-gradient);
+  padding:20px 10px;
+  text-align:center;
+  color:rgb(0, 0, 0);
+}
+
+
+/*-------------------Form Design-------------------*/
+
+.form h2{
+        /*for gradient text colour*/
+        background:var(--dark-gradient);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
+          font-size:1.2rem;
+          margin-bottom:-7%;
+          text-align:center;
+}
+
+
+
+
+
+
+
+
+
+/**------ Main Design Here----*/
 .main-hero-section{
     position:relative;
     min-height:100vh;
@@ -460,73 +753,19 @@ Hero Section Design
 }
 
 
-/*-------------------join-program-------------------*/
-
-.join-program{
-  background:var(--dark-gradient);
-  padding:20px 30px 60px;
-  text-align:center;
-  color:white;
-}
-
-.join-program h3{
-  font-size:1.5rem;
-  font-family: "Libre Franklin", serif;
-  font-optical-sizing: auto;
-  font-style:italic;
-  margin-bottom:-13px;
-}
-
-.join-program p{
-  font-size:.9rem;
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  line-height:22px;
-  margin-bottom:30px;
-}
-
-.join-program a{
-  color:white;
-  text-decoration:none;
-  font-size:1rem;
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight:600;
-  background:var(--light-blue-gradient);
-  padding:10px 20px;
-  border-radius:5px;
-  transition: all 0.7s ease;
-}
-
-.join-program a:hover{
-  background:white;
-  color:var(--orange-color);
-  
-}
 
 
-/*-------------------footer-------------------*/
-footer{
-  background:var(--light-blue-gradient);
-  padding:10px;
-  text-align:center;
-  color:black;
-}
 
 
-/*-------------------Form Design-------------------*/
 
-.form h2{
-        /*for gradient text colour*/
-        background:var(--dark-gradient);
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-          /*for gradient text colour*/
-          font-size:1.2rem;
-          margin-bottom:-7%;
-          text-align:center;
-}
+
+
+
+
+
+
+
+
 
 
 .form-main{
@@ -663,107 +902,4 @@ footer{
 .back-button button:hover{
   background:var(--orange-color);
   color:white;
-}
-
-
- /* ---------------Accordance Design start here--------- */
-.accord-box{
-  display: flex;
-  flex-direction: column;
-  margin:0px;
-  padding: 100px 20px;
-  width:100%;
-  background:white;
-  box-shadow:#93929137 7px 7px 30px;
-}
-
-.accord-box h2{
-  font-size:1rem;
-  text-align: center;
-  background: var(--orange-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-.accordion{
-  cursor:pointer;
-  padding:0px 20px;
-}
-
-.accordion li{
-  list-style:none;
-  width:90%;
-  margin:10px 20px;
-  padding:0px 10px;
-  border-radius:8px;
-
-}
-
-.accordion li label{
-  display:flex;
-  align-items:center;
-  color: rgb(139, 137, 137);
-  cursor: pointer;
-  padding: 10px 0px;
-  width: 100%;
-  text-align: left;
-  font-size: .9rem;
-  font-weight:500;
-  transition: all 0.5s ease, padding 0.3s ease;
-  border-radius: 5px;
-  box-shadow:6px 6px 10px -1px rgba(3, 2, 2, 0.089),
-              -6px -6px 10px -1px rgba(232, 229, 229, 0.514);
-  
-}
-
-.accordion li label:hover{
-  background:var(--orange-gradient);
-  color:white;
-  font-weight:700;
-}
-
-.accordion label::before{
-  content: '+';
-  color: rgb(139, 137, 137);
-  font-size:1.5rem;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-  padding-left:20px;
-}
-
-label:hover::before{
-  color:white;
-  font-size:1.2rem;
-}
-
-
-
-input[type="radio"]{
-  display:none;
-}
-
-.accordion .content{
-  font-size:.9rem;
-  font-weight:500;
-  line-height:20px;
-      /*for gradient text colour*/
-      background:var(--orange-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-         /*for gradient text colour*/
-         max-height:0;
-         overflow:hidden;
-         transition: max-height 0.5s ease, padding 0.5s ease;
-}
-
-.accordion input[type="radio"]:checked + label + .content{
-  max-height:400px;
-  padding:10px 20px;
-}
-
-.accordion input[type="radio"]:checked + label::before{
-  content: '-';
-  color: rgb(0, 0, 0);
-  font-size:1.5rem;
 }
