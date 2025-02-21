@@ -201,7 +201,6 @@ Hero Section Design
   align-items: center;
   margin-top:0px 20px;
   padding:0px 20px;
-  border-radius:10px;
 }
 
 .inner-box-img{
@@ -221,12 +220,30 @@ Hero Section Design
   width:100%;
   padding:60px 35px;
   align-items:center;
-  border:1px solid var(--blue-color);
-  border-radius:5px;
+  border-radius:20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   background:white;
   margin:10px 0px;
+  transition: all 0.5s ease-in-out;
+  cursor:pointer;
 }
+
+.inner-virtual-box:hover{
+  transform: scale(1.05);
+  border:1px solid var(--dark-blue);
+  background:var(--light-blue-gradient);
+}
+
+.inner-virtual-box:nth-child(2){
+  background:var(--light-blue-gradient);
+}
+
+.inner-virtual-box:nth-child(2):hover{
+  background:white;
+  transform:translateX(20px);
+}
+
+
 
 .inner-virtual-box h4{
   font-size:1.2rem;
