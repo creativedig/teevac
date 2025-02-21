@@ -6,6 +6,7 @@ font-family: "Raleway", serif;
   padding:0;
   margin:0;
   overflow-x:hidden;
+  cursor:pointer;
 }
 
 html{
@@ -14,17 +15,17 @@ html{
 
 /*Root design*/
 :root{
-    --blue-color:rgb(0, 170, 255);
-    --light-blue-color:rgb(84, 182, 247);
-    --dark-blue:rgb(5, 5, 90);
-    --blue2-color:rgb(0, 0, 255);
-    --yellow:rgb(255, 255, 0);
-    --orange-color:rgb(231, 48, 6);
-    --light-orange-color:rgb(248, 153, 0);
+    --blue-color:rgb(185, 81, 194);
+    --light-blue-color:rgb(249, 214, 255);
+    --dark-blue:rgb(65, 4, 59);
+    --blue2-color:rgb(147, 4, 147);
+    --orange-color:rgb(44, 27, 23);
+    --light-orange-color:rgb(98, 91, 80);
+    --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), white);
     --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
     --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
     --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
-  --gray-color:rgb(130, 128, 128);
+    --gray-color:rgb(234, 234, 234);
 
   }
 
@@ -84,7 +85,7 @@ Hero Section Design
 */
 
 .hero{
-  background:rgb(225, 225, 225);
+  background:var(--light-blue-gradient);
   width:100%;
   display:flex;
   flex-direction:column;
@@ -156,6 +157,54 @@ Hero Section Design
   color:white;
   text-decoration:none;
 }
+
+
+/*-------------------Why our Virtual Class here-------------------*/
+.why-virtual{
+background:var( --gray-color);
+  padding:100px 30px;
+  text-align:center;
+}
+
+.why-virtual h2{
+  font-size:1.5rem;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto; 
+  font-weight: 700;
+}
+
+.why-virtual p{
+  font-size:.8rem;
+  font-family: "Libre Franklin", serif;
+  font-weight: 400;
+  line-height:20px;
+  color:rgb(106, 105, 105);
+  margin-bottom:30px;
+}
+
+.why-virtual-box{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap:10px;
+  margin-top:30px;
+  background:white;
+  padding:20px 10px;
+  border-radius:10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
