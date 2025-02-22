@@ -127,3 +127,23 @@ function generateAllPDF() {
 // Function to display carousel
 
 
+
+
+//Function to toggle menu to show
+
+let Menu_Icon = document.getElementById('Menu_toggler'),
+    P_Menu = document.getElementById('Menu_Lists'),
+    Menu_text = document.getElementById('Menu_Items');
+
+
+// Show P_Menu when Menu_Icon is clicked
+Menu_Icon.addEventListener('click', () => {
+    P_Menu.style.right = '0'; // Show the P_Menu element
+});
+
+// Hide P_Menu when any text inside P_Menu is clicked
+P_Menu.addEventListener('click', (event) => {
+    if (event.target !== P_Menu) {
+        P_Menu.style.right = '-100%'; // Hide the P_Menu element
+    }
+});

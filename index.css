@@ -40,14 +40,14 @@ html{
   cursor:pointer;
   background:var(--light-blue-gradient);
   box-shadow: var(--shadow-two);
-  padding-right: 20px;
   display:flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 30px;
   height:20%;
   z-index:1200;
+  padding-right:30px;
 }
+
 
 
  .header-logo{
@@ -75,10 +75,56 @@ html{
   }
 
 .header-nav{
-  display:none;
+  position:absolute;
+  right:-100%;
+  top:100%;
+  width: 50%;
+  box-shadow:var(--shadow-two);
+  background:var(--dark-gradient);
+}
+
+.menu-list-container{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+.header-nav .menu-list{
+  display:flex;
+  flex-direction:column;
+  padding: 100px 10px;
+  text-align:center;
+}
+
+.header-nav .menu-list a{
+  text-decoration:none;
+  color:white;
+  font-size:1.2rem;
+  text-align:right;
+  margin: 5px 30px 5px 0px;
+  transition:all 0.5s ease-in-out;
+}
+
+.header-nav .menu-list a:hover{
+  color: var(--light-blue-color);
+  transform: scale(0.8);
+  letter-spacing: 2px;
 }
 
 
+.header-right-side h5{
+padding: 10px 15px;
+background:var(--light-blue-gradient);
+color: var(--blue2-color);
+font-size: 1.5rem;
+box-shadow:var(--shadow-two);
+transition:all 0.5s ease-in-out;
+}
+
+.header-right-side h5:hover{
+  background:var(--blue2-color);
+  color: var(--light-blue-color);
+}
 
 
   
