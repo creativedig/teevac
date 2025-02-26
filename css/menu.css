@@ -1,0 +1,148 @@
+
+/*======Colour for Root =====*/
+
+:root{
+    --blue-color:rgb(185, 81, 194);
+    --light-blue-color:rgb(249, 214, 255);
+    --dark-blue:rgb(65, 4, 59);
+    --blue2-color:rgb(147, 4, 147);
+    --orange-color:rgb(44, 27, 23);
+    --light-orange-color:rgb(98, 91, 80);
+    --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), rgb(235, 252, 254));
+    --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
+   --linear-background-gradient: linear-gradient(120deg, rgb(243, 197, 251), rgba(235, 252, 254, 0.144), rgb(201, 248, 253));
+    --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
+    --orange-gradient:linear-gradient(to right, var(--orange-color), var(--light-orange-color));
+    --gray-color:rgb(239, 239, 239);
+    --shadow-one: 0 0 30px rgba(0, 0, 0, 0.1);
+    --shadow-two: 0 0 50px rgba(30, 27, 27, 0.244);
+
+    --body-font: 'Poppins', sans-serif;
+    --tiny-font-size: .625rem;
+
+  }
+
+  @media screen and (min-width:968px){
+:root{
+    --tiny-font-size: .688rem;
+}  }
+
+/*======Base =====*/
+
+
+ul{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*====== NAVNAR DESIGN=====*/
+
+.nav{
+    position:fixed;
+    bottom:2rem;
+    left:0;
+    right: 0;
+    width: 80%;
+    height: 72px;
+    background:var(--light-blue-gradient);
+    color:var(--dark-blue);
+    box-shadow:var(--shadow-two);
+    margin: 0 auto;
+    padding: 1rem .5rem;
+    border-radius: .65rem;
+    overflow:hidden;
+    z-index:500;
+}
+
+.nav-list{
+    display:flex;
+    justify-content: center;
+    column-gap:.5rem;
+}
+
+.nav-link{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.nav-link i{
+    font-size:1.2rem;
+        /*for gradient text colour*/
+        background:var(--dark-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+            /*for gradient text colour*/
+    z-index:20;
+    transition:.3s;
+}
+
+.nav-name{
+ font-size: var(--tiny-font-size);
+  position: absolute;
+  font-weight: 500;
+  transition: .3s;
+  transform: translateY(50px);
+  z-index: 10;
+      /*for gradient text colour*/
+      background:var(--dark-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+          /*for gradient text colour*/
+  opacity: 0;
+}
+
+  
+  /* Active link */
+  .active-link i {
+    color: white;
+  }
+  
+  .active-link .nav-name {
+    opacity: 1;
+    transform: translateY(28px);
+  }
+  
+  /* Move indicator */
+  .nav-link:nth-child(1).active-link{
+    transform: translateX(calc(56px * 0));
+  }
+  
+  .nav-link:nth-child(2).active-link{
+    transform: translateX(calc(56px * 1));
+  }
+  
+  .nav-link:nth-child(3).active-link{
+    transform: translateX(calc(56px * 2));
+  }
+  
+  .nav-link:nth-child(4).active-link{
+    transform: translateX(calc(56px * 3));
+  }
+  
+  .nav-link:nth-child(5).active-link{
+    transform: translateX(calc(56px * 4));
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 320px) {
+    .nav {
+      zoom: .8;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 968px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .nav {
+      zoom: 1.1;
+    }
+  }

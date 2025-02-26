@@ -29,9 +29,11 @@
 
     <title>TEEVAC - [Teaching Evolve Academy]</title>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/animation.css">
     <link rel="canonical" href="https://yourwebsite.com">
+       <!--Menu Css Design Here-->
+   <link rel="stylesheet" href="/css/menu.css">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -41,93 +43,98 @@
 
 
 
+   <!--Icon Menu Link-->
+   <link
+   href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+   rel="stylesheet"
+/>
+
+
+
+
+
 </head>
 <!-- Bodysection start here-->
 
 
 <body>
 
-<!--Header design from Bootstrap here--------------------->
+<!--Header design  here--------------------->
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand logo-text" href="/index.html">TEEVAC</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-
-
-
-<!--Header design from Bootstrap ends here--------------------->
-
-
-
-
-
-
-
-    <!--Header and Logo Start here
-
- <header class="header-design">
-        <div class="header-logo">
-            <div class="header-logo-img">
-                <img src="/image/sponsor_2.png" alt="">
-            </div>
-        </div>
+ 
+    <!--   Navbar Design-->
+    <nav class="nav">
+   
+        <!---- Navlink for each menu design here------>
+        <a href="/index.html" class="nav-link active-link">
+            <ul class="nav-list">
+            <i class="ri-home-7-line"></i>
+            <span class="nav-name">
+                Home
+            </span>    
+        </a>
+       
+        <!---- Navlink for each menu design here------>
+        <a href="/register.html" class="nav-link">
+            <i class="ri-user-line"></i>
+            <span class="nav-name">
+                Register
+            </span>    
+        </a>
     
-        <div class="header-right-side " id="Menu_toggler">
-               <h5>+</h5>
-        </div>
+       
+        <!---- Navlink for each menu design here------>
+        <a href="/download.html" class="nav-link">
+            <i class="ri-file-cloud-line"></i>
+            <span class="nav-name">
+                Download
+            </span>    
+        </a>
+    
+    
+       
+        <!---- Navlink for each menu design here------>
+        <a href="/about.html" class="nav-link">
+            <i class="ri-survey-line"></i>
+            <span class="nav-name">
+                About Us
+            </span>    
+        </a>
+    
+    
+       
+        <!---- Navlink for each menu design here------>
+        <a href="/contact.html" class="nav-link">
+            <i class="ri-customer-service-2-line"></i>
+            <span class="nav-name">
+                Contact
+            </span>    
+        </a>
+    </ul>
+    </nav>
 
-    <nav class="header-nav"  id="Menu_Lists">
-        <div class="menu-list-container">
-            <div class="menu-list" id="Menu_Items">
-              <a href="#">Home</a>
-              <a href="#">Register</a>
-              <a href="#">Materials</a>
-              <a href="#">Admission</a>
-              <a href="#">About</a>
-              <a href="#">Sponsors</a>
-              <a href="#">Talk to Us</a>
-              </div>
-        </div>
-  </nav>
 
 
- </header>
 
--->
+
+
+<!--Header design  here--------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- -----------Hero Header section start here-------------------->
 
@@ -521,6 +528,11 @@
 
 
     
+    <!-------Menu Script------->
+    <script src="js/menu.js"></script>
+    <script src="js/index.js"></script>
+
+
 
     <!-- Bootstrap js link -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
