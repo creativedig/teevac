@@ -22,7 +22,6 @@ document.getElementById("tools").addEventListener("change", checkConditions);
 
 
 
-
 /** -------------------- When form is submitted---------------------* */
 
 document.getElementById("registrationForm").addEventListener("submit", function (event) {
@@ -47,39 +46,37 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     var userExists = storedData.some(entry => entry.email === email || entry.telephone === phone);
     
     if (userExists) {
-        alert("You have already registered with this email or phone number.");
+        alert("Sorry, You can't registered twice. Wait for the Exam date, and If you wish to change the program, contact the Admin for help. Thanks.");
         return;
     }
 
-    // Generate Matric Number
+    // Generate Examination Number
     var count = storedData.length + 1; // Ensure uniqueness
-    var matricNumber = "";
+    var ExamNumber = "";
 
     if (programme === "Web Design") {
-        matricNumber = `WEB/DES/2025/${String(count).padStart(5, '0')}`;
+        ExamNumber = `WEB/DES/2025/${String(count).padStart(5, '0')}`;
     } else if (programme === "Web Development") {
-        matricNumber = `WEB/DEV/2025/${String(count).padStart(5, '0')}`;
+        ExamNumber = `WEB/DEV/2025/${String(count).padStart(5, '0')}`;
     }
 
-    formObject.matricNumber = matricNumber; // Store matric number
+    formObject.ExamNumber = ExamNumber; // Store matric number
 
     // Save new submission
     storedData.push(formObject);
     localStorage.setItem("allSubmissions", JSON.stringify(storedData));
 
-    alert("Registration successful! Your Matric No: " + matricNumber);
+    alert("Registration successful! Your Examination Number is: " + " " + ExamNumber + " " + "Kindly Save it as it will be required to write the Exam. We hope to see you progress.");
 
     // Redirect based on selected program
-    if (programme === "Web Design") {
-        window.location.href = "https://www.google.com.ng";
-    } else if (programme === "Web Development") {
-        window.location.href = "https://www.google-new.com.ng";
-    }
+    if (programme === "Web Design" || programme === "Web Development") {
+         window.location.href = "#";
+    } 
 });
 
 // Function to download PDF only if correct code is entered
 function secureDownload() {
-    var accessCode = prompt("Enter the access code to download submissions:");
+    var accessCode = prompt("Enter the Download Code to get all the submission:");
     
     if (accessCode !== "WEB2025") {
         alert("Invalid access code! You cannot download the PDF.");
@@ -146,4 +143,23 @@ P_Menu.addEventListener('click', (event) => {
     if (event.target !== P_Menu) {
         P_Menu.style.right = '-100%'; // Hide the P_Menu element
     }
+});
+
+
+
+//JavaScript Function to show animation of about us section
+document.addEventListener("DOMContentLoaded", function () {
+    const coreValueBoxes = document.querySelectorAll(".core-value-box");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    coreValueBoxes.forEach(box => {
+        observer.observe(box);
+    });
 });

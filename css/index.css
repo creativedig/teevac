@@ -1010,6 +1010,9 @@ footer p a:hover{
   border-radius:20px;
   transform:rotate3d(1, 1, 1, -10deg);
   transition: 1s;
+  box-shadow: var(--shadow-one);
+  cursor:pointer;
+  transition: all .5s ease-in-out;
 }
 
 .core-value-box:hover{
@@ -1064,6 +1067,12 @@ footer p a:hover{
   color:var(--light-orange-color);
   margin-bottom:30px;
 }
+
+
+
+
+
+/*Download Page design*/
 
 
 .resources-box{
