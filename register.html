@@ -110,26 +110,18 @@
 
       <div class="form">
           <form id="registrationForm" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="Full Name">
             
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="telephone">Telephone:</label>
-            <input type="tel" id="telephone" name="telephone" required>
-            
-            <label for="whatsapp">Whatsapp No:</label>
-            <input type="tel" id="whatsapp" name="whatsapp" required>
-            
-            <label for="location">Location (State, Local Govt, Country):</label>
-            <input type="text" id="location" name="location" required>
+
+            <input type="email" id="email" name="email" required placeholder="E-mail"> 
+            <input type="tel" id="telephone" name="telephone" required placeholder="Telephone">     
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="WhatsApp Number">
+            <input type="text" id="location" name="location" required placeholder="Location (State, Local Govt, Country):">
             
             <label for="programme">Programme:</label>
             <select id="programme" name="programme" required>
@@ -137,8 +129,7 @@
                 <option value="Web Development">WEBSITE DEVELOPMENT</option>
             </select>
             
-            <label for="experience">Past Experience with the Program:</label>
-            <textarea id="experience" name="experience" rows="7" required></textarea>
+           <textarea id="experience" name="experience" rows="7" required placeholder="Past Experience with the Program"></textarea>
             
             <label>Will you be ready to get the required tools?</label>
             <select id="tools" name="tools" required>
@@ -151,12 +142,8 @@
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
             </select>
-
-            <label for="reason">Why are you applying for the course?</label>
-            <textarea id="reason" name="reason" rows="7" required></textarea>
-            
-            <label for="reason">What is your expectation on this course?</label>
-            <textarea id="reason" name="reason" rows="7"  required></textarea>
+            <textarea id="reason" name="reason" rows="7" required placeholder="Why are you applying for the course?"></textarea>
+            <textarea id="reason" name="reason" rows="7"  required placeholder="What is your expectation on this course?"></textarea>
             
             <label>Do you have access to a Laptop?</label>
             <select id="laptops" name="laptops" required>
