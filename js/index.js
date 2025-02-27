@@ -56,9 +56,9 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     var matricNumber = "";
 
     if (programme === "Web Design") {
-        matricNumber = `WEB/DES/2015/${String(count).padStart(5, '0')}`;
+        matricNumber = `WEB/DES/2025/${String(count).padStart(5, '0')}`;
     } else if (programme === "Web Development") {
-        matricNumber = `WEB/DEV/2015/${String(count).padStart(5, '0')}`;
+        matricNumber = `WEB/DEV/2025/${String(count).padStart(5, '0')}`;
     }
 
     formObject.matricNumber = matricNumber; // Store matric number
