@@ -957,15 +957,14 @@ footer p a:hover{
 }
 
 .about-img-text h3{
-  font-size:3rem;
+  font-size:3.5rem;
   text-align:center;
            /*for gradient text colour*/
            background:var(--light-blue-gradient);
            -webkit-background-clip: text;
            -webkit-text-fill-color: transparent;
               /*for gradient text colour*/
-  opacity:1;
-  line-height:45px;
+  opacity:.5;
   font-family: "Black Han Sans", serif;
   font-weight: 400;
   font-style: normal;
