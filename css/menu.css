@@ -151,7 +151,7 @@ a{
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
            /*for gradient text colour*/
-   opacity: .2;
+   opacity: .1;
  }
   
   /* Active link */
