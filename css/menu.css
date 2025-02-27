@@ -72,6 +72,7 @@ a{
     align-items:center;
     justify-content: center;
     position:relative;
+    text-align: center;
 }
 
 .nav-link i{
