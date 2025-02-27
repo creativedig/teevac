@@ -22,47 +22,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+/*---------- Menu Click function**/
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const headMenu = document.getElementById("head-menu");
+    const nav = document.getElementById("nav");
 
-
-
-
-
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav-list a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav-list a[href*=' + sectionId + ']').classList.remove('active-link')
+    headMenu.addEventListener("click", function () {
+        if (nav.classList.contains("show")) {
+            nav.classList.remove("show");
+            headMenu.innerHTML = "MENU";
+        } else {
+            nav.classList.add("show");
+            headMenu.innerHTML = "CLOSE";
         }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+    });
 
-/* If you do not require the indicator activated by scrolling sections. 
-   Delete the main tag code in HTML and the scroll sections code in 
-   JavaScript.
-
-   And uncomment the active link code in JavaScript 👇.
-*/
-
-/*=============== ACTIVE LINK ===============*/
-// const navlink = document.querySelectorAll('.nav__link')
-
-// function activeLink(){
-//     navlink.forEach((item) => item.classList.remove('active-link'))
-//     this.classList.add('active-link')
-// }
-
-// navlink.forEach((item) => item.addEventListener('click', activeLink))
+    nav.addEventListener("click", function () {
+        nav.classList.remove("show");
+        headMenu.innerHTML = "MENU";
+    });
+});
