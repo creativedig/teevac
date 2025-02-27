@@ -922,12 +922,12 @@ footer p a:hover{
 .about-img{
   position:relative;
   width:100%;
-  padding: 40px 30px;
+  padding: 150px 60px 0px;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction:column;  
-  animation:CircleRolling 15s linear infinite;
+  animation:CircleRolling 1s linear 1;
 }
 
 .about-img .img{
