@@ -28,6 +28,7 @@ html{
     --orange-color:rgb(44, 27, 23);
     --light-orange-color:rgb(98, 91, 80);
     --light-blue-gradient:linear-gradient(120deg, rgb(249, 214, 255), rgb(235, 252, 254));
+    --light-blue-gradient-2:linear-gradient(-120deg, rgb(249, 214, 255), rgb(235, 252, 254));
     --gradient-1:linear-gradient(90deg, var(--blue2-color), var(--light-blue-color));
    --linear-background-gradient: linear-gradient(120deg, rgb(243, 197, 251), rgba(235, 252, 254, 0.144), rgb(201, 248, 253));
     --dark-gradient:linear-gradient(-140deg, var(--blue2-color), var(--dark-blue));
@@ -897,7 +898,7 @@ footer p a:hover{
 }
 
 .about-text h4{
-  font-size:1.5rem;
+  font-size:2rem;
   font-weight:600;
   text-align:center;
       /*for gradient text colour*/
@@ -919,12 +920,12 @@ footer p a:hover{
 .about-img{
   position:relative;
   width:100%;
-  padding: 40px 20px;
+  padding: 40px 30px;
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-direction:column;
-  
+  flex-direction:column;  
+  animation:CircleRolling 15s linear infinite;
 }
 
 .about-img .img{
@@ -964,4 +965,78 @@ footer p a:hover{
               /*for gradient text colour*/
   opacity:1;
   line-height:45px;
+  font-family: "Hanalei Fill", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.core-value{
+  padding:150px 10px;
+  text-align:center;
+}
+
+.core-value-box{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin:0px 30px 30px;
+  padding:40px 20px 10px;
+  background:var(--linear-background-gradient);
+  border-radius:20px;
+  transform:rotate3d(1, 1, 1, -10deg);
+  transition: 1s;
+}
+
+.core-value-box:hover{
+  transform:rotate3d(1, 1, 1, 10deg);
+  background:var(--light-blue-gradient-2);
+  box-shadow: var(--shadow-one);
+}
+
+.core-value-box:nth-child(odd){
+  background:white;
+  box-shadow: var(--shadow-one);
+  transform:rotate3d(1, 1, 1, 10deg);
+}
+
+.core-value-box:nth-child(odd):hover{
+  background:var(--light-blue-gradient-2);
+  box-shadow: var(--shadow-one);
+  transform:rotate3d(1, 1, 1, -10deg);
+}
+
+.core-value-img{
+  width:100px;
+  height:100px;
+  border-radius:100px;
+  overflow:hidden;
+}
+
+.core-value-img img{
+  width:100px;
+  height:100px;
+}
+
+.core-value-text{
+  margin:15px 0px 0px;
+}
+
+.core-value-text h4{
+  font-size:1.2rem;
+  font-weight:600;
+      /*for gradient text colour*/
+      background:var(--dark-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+         /*for gradient text colour*/
+}
+
+.core-value-text p{
+  font-size:.8rem;
+  font-weight:400;
+  line-height:20px;
+  color:var(--light-orange-color);
+  margin-bottom:30px;
 }
