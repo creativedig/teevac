@@ -898,8 +898,10 @@ footer p a:hover{
 }
 
 .about-text h4{
+  font-family: "Black Han Sans", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size:2rem;
-  font-weight:600;
   text-align:center;
       /*for gradient text colour*/
       background:var(--dark-gradient);
@@ -942,7 +944,7 @@ footer p a:hover{
 }
 
 #img-2{
-  width:70%;
+  width:60%;
   height:auto;
   border-radius:10px;
   margin: 0 auto;
@@ -956,7 +958,6 @@ footer p a:hover{
 
 .about-img-text h3{
   font-size:3rem;
-  font-weight:600;
   text-align:center;
            /*for gradient text colour*/
            background:var(--light-blue-gradient);
@@ -965,7 +966,7 @@ footer p a:hover{
               /*for gradient text colour*/
   opacity:1;
   line-height:45px;
-  font-family: "Hanalei Fill", serif;
+  font-family: "Black Han Sans", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -999,6 +1000,7 @@ footer p a:hover{
   background:white;
   box-shadow: var(--shadow-one);
   transform:rotate3d(1, 1, 1, 10deg);
+  
 }
 
 .core-value-box:nth-child(odd):hover{
