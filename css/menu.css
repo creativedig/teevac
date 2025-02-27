@@ -149,7 +149,7 @@ a{
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
            /*for gradient text colour*/
-   opacity: 0;
+   opacity: .2;
  }
   
   /* Active link */
