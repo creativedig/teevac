@@ -54,10 +54,10 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     var count = storedData.length + 1; // Ensure uniqueness
     var ExamNumber = "";
 
-    if (programme === "Web Design") {
-        ExamNumber = `WEB/DES/2025/${String(count).padStart(5, '0')}`;
-    } else if (programme === "Web Development") {
-        ExamNumber = `WEB/DEV/2025/${String(count).padStart(5, '0')}`;
+    if (programme === "Web Design") { 
+        ExamNumber = `TEV/DES/2025/${String(count).padStart(5, '0')}`;
+    } else if (programme === "Web Development") { 
+        ExamNumber = `TEV/DEV/2025/${String(count).padStart(5, '0')}`;
     }
 
     formObject.ExamNumber = ExamNumber; // Store matric number
@@ -162,4 +162,34 @@ document.addEventListener("DOMContentLoaded", function () {
     coreValueBoxes.forEach(box => {
         observer.observe(box);
     });
+});
+
+
+
+// Function to Download EXAM HANDOUT
+document.getElementById("Exam-Handout").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    
+    let userExamNumber = prompt("Please enter your Exam Number to access the handout:");
+    
+    if (!userExamNumber) {
+        alert("Exam Number is required to download the handout.");
+        return;
+    }
+    
+    // Generate Examination Number (assuming programme and storedData are defined)
+    var count = storedData.length + 1; // Ensure uniqueness
+    var ExamNumber = "";
+    
+    if (programme === "Web Design") { 
+        ExamNumber = `TEV/DES/2025/${String(count).padStart(5, '0')}`;
+    } else if (programme === "Web Development") { 
+        ExamNumber = `TEV/DEV/2025/${String(count).padStart(5, '0')}`;
+    }
+    
+    if (userExamNumber === ExamNumber) {
+        window.location.href = "/doc/handout.pdf"; // Redirect to the document
+    } else {
+        alert("Sorry, you can’t download the Exam Handout. Kindly register first to download. Thanks");
+    }
 });
