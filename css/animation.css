@@ -129,7 +129,7 @@ Loader Animation settings
   }
 }
 
-/* Delay for each letter */
+/* Delay for each letter 
 .loading-text:nth-child(1) {
   animation-delay: 0s;
 }
@@ -163,6 +163,7 @@ Loader Animation settings
 .loading-text:nth-child(11) {
   animation-delay: 3s;
 }
+  */
 
 
 @keyframes HomeSlideIn {
