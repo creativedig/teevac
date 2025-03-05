@@ -193,21 +193,3 @@ document.getElementById("Exam-Handout").addEventListener("click", function(event
         alert("Sorry, you can’t download the Exam Handout. Kindly register first to download. Thanks");
     }
 });
-
-
-
-
-//Loading Function here
-
-// JavaScript to hide the loading screen after 10 seconds
-window.onload = function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const loadingText = document.querySelector('.loading-text-container');
-
-    // Show the loading text animation
-    setTimeout(function() {
-        // After 10 seconds, hide the loading screen
-        loadingScreen.style.opacity = '0';
-        loadingScreen.style.visibility = 'hidden';
-    }, 3000);  // 3 seconds delay for hiding the loading screen
-};

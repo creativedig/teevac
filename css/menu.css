@@ -105,7 +105,7 @@ a{
   }
 
 .nav.show {
-  animation: BottomMenu 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: BottomMenu 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   bottom: 1rem;
 }
 

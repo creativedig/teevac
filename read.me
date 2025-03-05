@@ -63,3 +63,78 @@ Hanalei Fill: CSS class
 
 
  -->
+
+
+
+
+
+
+
+ <!--  Loader Settings---------->
+
+ <!--LOADING OVERLAY DESIGN HERE-->
+    <!--LOADING OVERLAY DESIGN HERE-->
+    <!--LOADING OVERLAY DESIGN HERE-->
+    <div id="loading-screen">
+        <!-- Spiral Animation -->
+        <div id="spiral-animation"></div>
+        
+        <!-- Loading Text -->
+        <div class="loading-text-container">
+            <span class="loading-text">T</span>
+            <span class="loading-text">E</span>
+            <span class="loading-text">E</span>
+            <span class="loading-text">V</span>
+            <span class="loading-text">A</span>
+            <span class="loading-text">C</span>
+             <span class="loading-text">.</span>
+            <span class="loading-text">.</span>
+            <span class="loading-text">.</span>
+            <span class="dot">.</span>
+        </div>
+    </div>
+
+
+
+<!-- Loader Settings Ends Here------------->
+
+//Loading Function here
+
+// JavaScript to hide the loading screen after 10 seconds
+window.onload = function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const loadingText = document.querySelector('.loading-text-container');
+
+    // Show the loading text animation
+    setTimeout(function() {
+        // After 10 seconds, hide the loading screen
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+    }, 3000);  // 3 seconds delay for hiding the loading screen
+};
+
+
+
+
+
+
+
+
+   <section class="hero">
+<div class="hero-text">
+    <h1 id="web-hero">WEB CRASH COURSE</h1>
+    <h5 id="web-hero">Learn Web Development from Crash <br> in 20+ COMPREHENSIVE CLASSES.</h5>
+    
+</div>
+
+<div class="hero-text-2" id="web-hero-right-animation">
+   <p>Unlock your potential with our expertly designed <br> courses tailored for success.</p>
+    <a href="#">REGISTER NOW</a>
+</div>
+
+<div class="hero-img">
+    <img src="/image/hero_image.webp" alt="TECH">
+
+</div>
+
+</section>

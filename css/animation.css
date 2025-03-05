@@ -1,48 +1,25 @@
-@keyframes autoBlurAnimation {
-    0% {
-      filter: blur(40px);
-    }
-
-    10%, 90%{
-      opacity: 1;
-      filter: blur(0px);
-    }
-    100% {
-      opacity: 0;
-      filter: blur(40px);
-    }
-    
-  }
-
-  .autoBlurDesign, section{
-    animation:autoBlurAnimation both linear;
-    animation-timeline:view();
-  }
-
   @keyframes BottomMenu {
     0% {
-        bottom: -100%;  /* Start from below */
+        bottom: -200%;  /* Start from below */
         opacity: 0;
         scale: 0;
-        transform: rotate(-100deg) skewX(-50deg);
+
     }
     50% {
         bottom: 1rem;
-        opacity: 0.7;
-        scale: 1.2;
-        transform: rotate(5deg) skewX(2deg);
+        scale: .3;
+
     }
     75% {
-        bottom: 0.8rem;
-        opacity: 0.5;
+        bottom: 0.5rem;
         scale: 0.95;
-        transform: rotate(-20deg) skewX(-10deg);
+
     }
     100% {
-        bottom: 1rem;
+        bottom: .5rem;
         opacity: 1;
         scale: 1;
-        transform: rotate(0deg) skewX(0deg);
+
     }
 }
 
@@ -188,6 +165,77 @@ Loader Animation settings
 }
 
 
+@keyframes HomeSlideIn {
+  0% {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
 
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#web-hero {
+  animation: HomeSlideIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
   
-  
+
+/*---- CSS HERO ANIMATION HERE*/
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInZoom {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply Animations */
+#web-hero {
+  animation: slideInTop 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+#web-hero-right-animation {
+
+  opacity: 0;
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.hero-img img {
+  opacity: 0;
+  transform: scale(0);
+  animation: fadeInZoom 1s ease-out forwards;
+  animation-delay: .5s;
+}
+
+
+
