@@ -223,11 +223,8 @@ Loader Animation settings
   animation-delay: 0.5s;
 }
 
-#web-hero-right-animation {
-
-  opacity: 0;
+.hero-text-2.in-view {
   animation: slideInRight 1s ease-out forwards;
-  animation-delay: 1.5s;
 }
 
 .hero-img img {
