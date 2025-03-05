@@ -46,7 +46,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     var userExists = storedData.some(entry => entry.email === email || entry.telephone === phone);
     
     if (userExists) {
-        alert("Sorry, You can't registered twice. Wait for the Exam date, and If you wish to change the program, contact the Admin for help. Thanks.");
+        alert("Sorry, You can't registered twice. If you wish to change the program, contact the Admin for help. Thanks.");
         return;
     }
 
@@ -66,7 +66,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     storedData.push(formObject);
     localStorage.setItem("allSubmissions", JSON.stringify(storedData));
 
-    alert("Registration successful! Your Examination Number is: " + " " + ExamNumber + " " + "Kindly Save it as it will be required to write the Exam. We hope to see you progress.");
+    alert("Registration successful! Your Entrance Number is: " + " " + ExamNumber + " " + "Kindly Save it as it will be required for the training. We hope to see you progress.");
 
     // Redirect based on selected program
     if (programme === "Web Design" || programme === "Web Development") {
@@ -76,10 +76,10 @@ document.getElementById("registrationForm").addEventListener("submit", function 
 
 // Function to download PDF only if correct code is entered
 function secureDownload() {
-    var accessCode = prompt("Enter the Download Code to get all the submission:");
+    var accessCode = prompt("Admin Access Only -- Enter the access code to download the PDF:");
     
     if (accessCode !== "WEB2025") {
-        alert("Invalid access code! You cannot download the PDF.");
+        alert("Invalid access code! It shows that you're not an Admin.");
         return;
     }
 
@@ -98,7 +98,7 @@ function generateAllPDF() {
     }
 
     let y = 10;
-    doc.text("All Registration Submissions", 10, y);
+    doc.text("All Submission", 10, y);
     y += 10;
 
     storedData.forEach((submission, index) => {
@@ -162,34 +162,4 @@ document.addEventListener("DOMContentLoaded", function () {
     coreValueBoxes.forEach(box => {
         observer.observe(box);
     });
-});
-
-
-
-// Function to Download EXAM HANDOUT
-document.getElementById("Exam-Handout").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    
-    let userExamNumber = prompt("Please enter your Exam Number to access the handout:");
-    
-    if (!userExamNumber) {
-        alert("Exam Number is required to download the handout.");
-        return;
-    }
-    
-    // Generate Examination Number (assuming programme and storedData are defined)
-    var count = storedData.length + 1; // Ensure uniqueness
-    var ExamNumber = "";
-    
-    if (programme === "Web Design") { 
-        ExamNumber = `TEV/DES/2025/${String(count).padStart(5, '0')}`;
-    } else if (programme === "Web Development") { 
-        ExamNumber = `TEV/DEV/2025/${String(count).padStart(5, '0')}`;
-    }
-    
-    if (userExamNumber === ExamNumber) {
-        window.location.href = "/doc/handout.pdf"; // Redirect to the document
-    } else {
-        alert("Sorry, you can’t download the Exam Handout. Kindly register first to download. Thanks");
-    }
 });
