@@ -186,11 +186,11 @@ Loader Animation settings
 
 @keyframes slideInTop {
   0% {
-    transform: translateY(-50px);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -208,11 +208,15 @@ Loader Animation settings
 
 @keyframes fadeInZoom {
   0% {
-    transform: translateX(-100%);
+    transform: translateY(100%) scale(0);
     opacity: 0;
   }
+  50% {
+    transform: translateY(50%) scale(2);
+    opacity: 0.5;
+  }
   100% {
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
@@ -233,6 +237,7 @@ Loader Animation settings
   animation: fadeInZoom 1s ease-out forwards;
   animation-delay: .5s;
 }
+
 
 
 
