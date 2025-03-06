@@ -990,7 +990,7 @@ footer p a:hover{
            -webkit-background-clip: text;
            -webkit-text-fill-color: transparent;
               /*for gradient text colour*/
-  opacity:.8;
+  opacity:.3;
   font-family: "Black Han Sans", serif;
   font-weight: 400;
   font-style: normal;
