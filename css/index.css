@@ -990,7 +990,7 @@ footer p a:hover{
            -webkit-background-clip: text;
            -webkit-text-fill-color: transparent;
               /*for gradient text colour*/
-  opacity:.5;
+  opacity:.8;
   font-family: "Black Han Sans", serif;
   font-weight: 400;
   font-style: normal;
@@ -1010,28 +1010,28 @@ footer p a:hover{
   margin:0px 30px 30px;
   padding:40px 20px 10px;
   background:var(--linear-background-gradient);
-  border-radius:20px;
+  border-radius:30px 0px 30px 0px;
   transform:rotate3d(1, 1, 1, -10deg);
-  transition: 1s;
   box-shadow: var(--shadow-one);
   cursor:pointer;
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .core-value-box:hover{
+  border-radius:0px 30px 0px 30px;
   transform:rotate3d(1, 1, 1, 10deg);
   background:var(--light-blue-gradient-2);
   box-shadow: var(--shadow-one);
 }
 
-.core-value-box:nth-child(odd){
+.core-value-box:nth-child(even){
   background:white;
   box-shadow: var(--shadow-one);
   transform:rotate3d(1, 1, 1, 10deg);
   
 }
 
-.core-value-box:nth-child(odd):hover{
+.core-value-box:nth-child(even):hover{
   background:var(--light-blue-gradient-2);
   box-shadow: var(--shadow-one);
   transform:rotate3d(1, 1, 1, -10deg);
