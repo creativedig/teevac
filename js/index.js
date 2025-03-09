@@ -156,7 +156,7 @@ P_Menu.addEventListener('click', (event) => {
 function resetStoredData() {
     var accessCode = prompt("Admin Access Only -- Enter the access code to reset all data:");
 
-    if (accessCode !== "WEB2025") {
+    if (accessCode !== "RESET2025") {
         alert("Invalid access code! You are not authorized to reset the data.");
         return;
     }
