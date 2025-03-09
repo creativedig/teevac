@@ -66,14 +66,19 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     storedData.push(formObject);
     localStorage.setItem("allSubmissions", JSON.stringify(storedData));
 
-    alert("Registration successful! Your Entrance Number is: " + " " + ExamNumber + " " + "Kindly Save it as it will be required for the training. We hope to see you progress.");
+    alert("Registration successful! Your Entrance Number is: " + " " + ExamNumber + " " + "Kindly Save it as it will be required for the training. Click okay to be redirect to the group general platform. Thanks.");
 
     // Redirect based on selected program
     if (programme === "Web Design" || programme === "Web Development") {
-         window.location.href = "#";
+         window.location.href = "https://t.me/+FzHej-9trupiN2Y0"; // Redirect to Telegram group
     } 
 });
 
+
+
+
+// Function to display all submissions
+// Function to download PDF of all submissions
 // Function to download PDF only if correct code is entered
 function secureDownload() {
     var accessCode = prompt("Admin Access Only -- Enter the access code to download the PDF:");
@@ -121,9 +126,6 @@ function generateAllPDF() {
 }
 
 
-// Function to display carousel
-
-
 
 
 //Function to toggle menu to show
@@ -145,38 +147,29 @@ P_Menu.addEventListener('click', (event) => {
     }
 });
 
+//function to reset form
+//function to reset form
+//function to reset form
+//function to reset form
+
+// Function to reset stored data with access code verification
+function resetStoredData() {
+    var accessCode = prompt("Admin Access Only -- Enter the access code to reset all data:");
+
+    if (accessCode !== "WEB2025") {
+        alert("Invalid access code! You are not authorized to reset the data.");
+        return;
+    }
+
+    localStorage.removeItem("allSubmissions"); // Clear stored data
+    alert("All stored data has been successfully reset.");
+}
+
+// Attach event listener to the reset button
+document.getElementById("resetData").addEventListener("click", resetStoredData);
 
 
-//JavaScript Function to show animation of about us section
-document.addEventListener("DOMContentLoaded", function () {
-    const coreValueBoxes = document.querySelectorAll(".core-value-box");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("in-view");
-            }
-        });
-    }, { threshold: 0.3 });
-
-    coreValueBoxes.forEach(box => {
-        observer.observe(box);
-    });
-});
 
 
 
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    let elements = document.querySelectorAll(".inner-virtual-box");
-    let observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        }
-      });
-    }, { threshold: 0.3 });
-    
-    elements.forEach(el => observer.observe(el));
-});
