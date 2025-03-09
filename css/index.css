@@ -1161,7 +1161,7 @@ padding: 100px 30px
   margin: 0px 30px 20px;
 }
 
-.resources-link a{
+.resources-link a, .resources-link button{
   color:white;
   text-decoration:none;
   font-size:.8rem;
@@ -1173,7 +1173,7 @@ padding: 100px 30px
   margin-right: 20px;
 }
 
-.resources-link a:hover{
+.resources-link a:hover, .resources-link button:hover{
   background:var(--blue-color);
   color:white;
   text-decoration:none;
