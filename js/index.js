@@ -77,13 +77,14 @@ document.getElementById("registrationForm").addEventListener("submit", function 
 
 
 
-// Function to display all submissions
-// Function to download PDF of all submissions
+// Function to download PDF only if correct code is entered
+// Function to download PDF only if correct code is entered
+// Function to download PDF only if correct code is entered
 // Function to download PDF only if correct code is entered
 function secureDownload() {
     var accessCode = prompt("Admin Access Only -- Enter the access code to download the PDF:");
     
-    if (accessCode !== "WEB2025") {
+    if (accessCode !== "TEEVAC2025") {
         alert("Invalid access code! It shows that you're not an Admin.");
         return;
     }
@@ -103,7 +104,7 @@ function generateAllPDF() {
     }
 
     let y = 10;
-    doc.text("All Submission", 10, y);
+    doc.text("All Submissions", 10, y);
     y += 10;
 
     storedData.forEach((submission, index) => {
@@ -124,6 +125,10 @@ function generateAllPDF() {
 
     doc.save("All_Registrations.pdf"); // Save as PDF
 }
+
+// Attach event listener to the "Data Download" button
+document.getElementById("DataFile").addEventListener("click", secureDownload);
+
 
 
 
@@ -152,18 +157,22 @@ P_Menu.addEventListener('click', (event) => {
 //function to reset form
 //function to reset form
 
-// Function to reset stored data with access code verification
-function resetStoredData() {
-    var accessCode = prompt("Admin Access Only -- Enter the access code to reset all data:");
 
-    if (accessCode !== "RESET2025") {
-        alert("Invalid access code! You are not authorized to reset the data.");
+
+// Function to delete all stored form data with access code verification
+// Function to delete all stored form data with access code verification
+// Function to delete all stored form data with access code verification
+function deleteAllStoredData() {
+    var accessCode = prompt("Admin Access Only -- Enter the access code to delete all data:");
+
+    if (accessCode !== "TEEVAC2025") {
+        alert("Invalid access code! You are not authorized to delete the data.");
         return;
     }
 
-    localStorage.removeItem("allSubmissions"); // Clear stored data
-    alert("All stored data has been successfully reset.");
+    localStorage.clear(); // Clear all stored data
+    alert("All stored form data has been successfully deleted.");
 }
 
-// Attach event listener to the reset button
-document.getElementById("resetData").addEventListener("click", resetStoredData);
+// Attach event listener to the delete button
+document.getElementById("deleteData").addEventListener("click", deleteAllStoredData);
