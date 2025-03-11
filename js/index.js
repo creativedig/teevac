@@ -176,3 +176,11 @@ function deleteAllStoredData() {
 
 // Attach event listener to the delete button
 document.getElementById("deleteData").addEventListener("click", deleteAllStoredData);
+
+
+//Loading settings
+var loader = document.getElementById('pre');
+
+window.addEventListener('load', function () {
+    loader.style.display = 'none';
+});
