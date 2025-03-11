@@ -79,8 +79,69 @@ document.getElementById("registrationForm").addEventListener("submit", function 
 
 // Function to download PDF only if correct code is entered
 // Function to download PDF only if correct code is entered
-// Function to download PDF only if correct code is entered
-// Function to download PDF only if correct code is entered
+
+
+
+
+function downloadSubmissions(format) {
+    var storedData = JSON.parse(localStorage.getItem("allSubmissions")) || [];
+    
+    if (storedData.length === 0) {
+        alert("No data available to download.");
+        return;
+    }
+    
+    var accessCode = prompt("Enter access code to download the data:");
+    if (accessCode !== "TEEVAC2025") {
+        alert("Incorrect access code. Download denied.");
+        return;
+    }
+    
+    if (format === "csv") {
+        var csvContent = "data:text/csv;charset=utf-8,";
+        var headers = Object.keys(storedData[0]).join(",") + "\n";
+        csvContent += headers;
+
+        storedData.forEach(entry => {
+            var row = Object.values(entry).map(value => `"${value}"`).join(",");
+            csvContent += row + "\n";
+        });
+
+        var encodedUri = encodeURI(csvContent);
+        var link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "submissions.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else if (format === "excel") {
+        var wb = XLSX.utils.book_new();
+        var ws = XLSX.utils.json_to_sheet(storedData);
+        XLSX.utils.book_append_sheet(wb, ws, "Submissions");
+        XLSX.writeFile(wb, "submissions.xlsx");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to download PDF only if correct code is entered NOT WORKING
+// Function to download PDF only if correct code is entered NOT WORKING
 function secureDownload() {
     var accessCode = prompt("Admin Access Only -- Enter the access code to download the PDF:");
     
@@ -126,9 +187,6 @@ function generateAllPDF() {
     doc.save("All_Registrations.pdf"); // Save as PDF
 }
 
-// Attach event listener to the "Data Download" button
-document.getElementById("DataFile").addEventListener("click", secureDownload);
-
 
 
 
@@ -150,37 +208,4 @@ P_Menu.addEventListener('click', (event) => {
     if (event.target !== P_Menu) {
         P_Menu.style.right = '-100%'; // Hide the P_Menu element
     }
-});
-
-//function to reset form
-//function to reset form
-//function to reset form
-//function to reset form
-
-
-
-// Function to delete all stored form data with access code verification
-// Function to delete all stored form data with access code verification
-// Function to delete all stored form data with access code verification
-function deleteAllStoredData() {
-    var accessCode = prompt("Admin Access Only -- Enter the access code to delete all data:");
-
-    if (accessCode !== "TEEVAC2025") {
-        alert("Invalid access code! You are not authorized to delete the data.");
-        return;
-    }
-
-    localStorage.clear(); // Clear all stored data
-    alert("All stored form data has been successfully deleted.");
-}
-
-// Attach event listener to the delete button
-document.getElementById("deleteData").addEventListener("click", deleteAllStoredData);
-
-
-//Loading settings
-var loader = document.getElementById('pre');
-
-window.addEventListener('load', function () {
-    loader.style.display = 'none';
 });

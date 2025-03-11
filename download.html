@@ -49,9 +49,9 @@
        rel="stylesheet"
     />
     
+       <!-- Excel Downloading-->
     
-    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
     </head>
     <!-- Bodysection start here-->
@@ -71,7 +71,7 @@
         
         <!-----------Preloading settings----------->
 
-        
+
         <!-- Menu link button start-------------->
         
         <header class="header-container">
@@ -192,7 +192,8 @@
                 an official, verifiable certificate.</p>
         </div>
         <div class="resources-link">
-            <button class="BtnDownload" id="DataFile">Data Download</button>
+            <button onclick="downloadSubmissions('excel')" class="BtnDownload">Download Excel</button>
+
         </div>
     </div>
 
